@@ -14,6 +14,9 @@ pub fn printer_fn() {
     println!("{}", cat);
     println!("{}", x);
 
+}
+
+pub fn machine_type() {
     // Check the type of maching
     let machine_kind = if cfg!(unix) {
         "unix"
