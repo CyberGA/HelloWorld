@@ -1,9 +1,9 @@
-mod hi;
+mod printer;
 
 fn main() {
     println!("Hello, world!");
     println!("Welcome to RUST programming!!");
-    hi::printer_fn()
+    printer::printer_fn()
 }
 
 #[test]

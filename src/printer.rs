@@ -13,4 +13,14 @@ pub fn printer_fn() {
     println!("{}", dog);
     println!("{}", cat);
     println!("{}", x);
+
+    // Check the type of maching
+    let machine_kind = if cfg!(unix) {
+        "unix"
+      } else if cfg!(windows) {
+        "windows"
+      } else {
+        "unknown"
+      };
+    println!("Your machine type is {}", machine_kind);
 }
