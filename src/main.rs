@@ -1,7 +1,7 @@
 mod printer;
 
 fn main() {
-    printer::loop_for();
+    printer::usin_enum();
 }
 
 #[test]

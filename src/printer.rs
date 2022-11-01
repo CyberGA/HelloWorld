@@ -64,3 +64,21 @@ pub fn loop_for() {
     println!("{} is at index {}", car, index)
   }
 }
+
+enum Days {
+  Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+}
+
+pub fn usin_enum() {
+  let event_day:Days = Days::Monday;
+
+  match event_day {
+      Days::Monday => println!("The event day is Monday"),
+      Days::Tuesday => println!("The event day is Tuesday"),
+      Days::Wednesday => println!("The event day is Wednesday"),
+      Days::Thursday => println!("The event day is Thursday"),
+      Days::Friday => println!("The event day is Friday"),
+      Days::Saturday => println!("The event day is Saturday"),
+      Days::Sunday => println!("The event day is Sunday")
+  }
+}
