@@ -1,7 +1,7 @@
 mod printer;
 
 fn main() {
-    printer::usin_enum();
+    printer::using_constants();
 }
 
 #[test]

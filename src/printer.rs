@@ -1,3 +1,4 @@
+const LENGTH: u32 = 20;
 /// This function is just to say hi
 /**
  * prints out "Hi there"
@@ -80,5 +81,11 @@ pub fn usin_enum() {
       Days::Friday => println!("The event day is Friday"),
       Days::Saturday => println!("The event day is Saturday"),
       Days::Sunday => println!("The event day is Sunday")
+  }
+}
+
+pub fn using_constants() {
+  for n in 1..LENGTH+1 {
+    print!(" {}", n);
   }
 }
