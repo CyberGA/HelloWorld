@@ -89,3 +89,13 @@ pub fn using_constants() {
     print!(" {}", n);
   }
 }
+
+pub fn using_tuple() {
+  let tup = (29, "days", 4.3, false, ("Monday", "Tuesday", "Wednesday", "Thursday"));
+  println!("{}", tup.1);
+  let (mon, tues, weds, thurs) = tup.4;
+  println!("Monday is {}", mon);
+  println!("Tuesday is {}", tues);
+  println!("Wednesday is {}", weds);
+  println!("Thursday is {}", thurs);
+}
