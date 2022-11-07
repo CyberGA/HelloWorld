@@ -101,6 +101,7 @@ pub fn using_tuple() {
 }
 
 pub fn print_str() {
-  let Name:&str = "Testing.......";
-  println!("{}", Name);
+  let name: &str = "Testing.......";
+  println!("{}", name);
+  println!("The name has {} characters", name.len());
 }
