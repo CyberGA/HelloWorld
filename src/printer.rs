@@ -102,6 +102,11 @@ pub fn using_tuple() {
 
 pub fn print_str() {
   let name: &str = "Testing.......";
-  println!("{}", name);
+  let mut first_name = String::new();
+  first_name.push_str("Gbenga");
+  let surname = String::from("Etomu");
+  println!("Name is {}", name);
+  println!("First name is {}", first_name);
+  println!("Surname is {}", surname);
   println!("The name has {} characters", name.len());
 }
