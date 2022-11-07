@@ -99,3 +99,8 @@ pub fn using_tuple() {
   println!("Wednesday is {}", weds);
   println!("Thursday is {}", thurs);
 }
+
+pub fn print_str() {
+  let Name:&str = "Testing.......";
+  println!("{}", Name);
+}
