@@ -1,7 +1,7 @@
 mod printer;
 
 fn main() {
-    printer::using_tuple();
+    printer::print_str();
 }
 
 #[test]
