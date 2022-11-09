@@ -136,6 +136,7 @@ pub fn using_array() { // can only store value of the same data time
 /**
  * passing array as parameters to function
  */
-pub fn print_arr(mut arr:[i32;4]) {
+// pub fn print_arr(mut arr:[i32;4]) { // pass by value
+pub fn print_arr(arr: &mut[i32;4]) {
   println!("The array is : {:?}", arr);
 }

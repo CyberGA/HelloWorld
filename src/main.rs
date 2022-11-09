@@ -1,7 +1,8 @@
 mod printer;
 
 fn main() {
-    printer::print_arr([ 10, 20, 30, 40]);
+    let mut arr = [ 10, 20, 30, 40];
+    printer::print_arr(&mut arr);
 }
 
 #[test]
