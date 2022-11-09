@@ -117,5 +117,7 @@ pub fn using_array() { // can only store value of the same data time
 
   println!("The array is {:?} & the size is {}", arr, arr.len());
 
-  
+  for index in 0..arr.len() {
+    println!("{}", arr[index]);
+  }
 }
