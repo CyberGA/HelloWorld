@@ -1,7 +1,7 @@
 mod printer;
 
 fn main() {
-    printer::using_array();
+    printer::print_arr([ 10, 20, 30, 40]);
 }
 
 #[test]
