@@ -115,7 +115,7 @@ pub fn print_str() {
 pub fn using_array() { // can only store value of the same data time
   let mut arr:[i32;4] = [ 10, 20, 30, 40];
 
-  println!("The array is {:?} & the size is {}", arr, arr.len());
+  // println!("The array is {:?} & the size is {}", arr, arr.len());
 
   // for index in 0..arr.len() {
   //   println!("Using the range method");
@@ -130,7 +130,14 @@ pub fn using_array() { // can only store value of the same data time
 
   // Making array mutable
     arr[3] = 80;
-    println!("The array is {:?} after changes", arr);
+    // println!("The array is {:?} after changes", arr);
+
+    // using constants with array
+    const N: usize = 20; 
+   // pointer sized
+    let nums_arr = [0; N];
+
+    println!("The array is {:?} & the size is {}", nums_arr, nums_arr.len())
 }
 
 /**
