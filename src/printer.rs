@@ -113,7 +113,7 @@ pub fn print_str() {
 }
 
 pub fn using_array() { // can only store value of the same data time
-  let arr:[i32;4] = [ 10, 20, 30, 40];
+  let mut arr:[i32;4] = [ 10, 20, 30, 40];
 
   println!("The array is {:?} & the size is {}", arr, arr.len());
 
@@ -123,8 +123,12 @@ pub fn using_array() { // can only store value of the same data time
   // }
 
   // Iter() method on array, fetches the values of all elem in an array
-  println!("Using the iter method");
-  for val in arr.iter() {
-    println!("{}", val);
-  }
+  // println!("Using the iter method");
+  // for val in arr.iter() {
+  //   println!("{}", val);
+  // }
+
+  // Making array mutable
+    arr[3] = 80;
+    println!("The array is {:?} after changes", arr);
 }
