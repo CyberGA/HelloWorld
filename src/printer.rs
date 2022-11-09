@@ -90,7 +90,7 @@ pub fn using_constants() {
   }
 }
 
-pub fn using_tuple() {
+pub fn using_tuple() { // can store value of different data type
   let tup = (29, "days", 4.3, false, ("Monday", "Tuesday", "Wednesday", "Thursday"));
   println!("{}", tup.1);
   let (mon, tues, weds, thurs) = tup.4;
@@ -101,12 +101,21 @@ pub fn using_tuple() {
 }
 
 pub fn print_str() {
-  let name: &str = "Testing.......";
+  let mut name = "Testing.......";
   let mut first_name = String::new();
   first_name.push_str("Gbenga");
   let surname = String::from("Etomu");
+
   println!("Name is {}", name);
   println!("First name is {}", first_name);
   println!("Surname is {}", surname);
   println!("The name has {} characters", name.len());
+}
+
+pub fn using_array() { // can only store value of the same data time
+  let arr:[i32;4] = [ 10, 20, 30, 40];
+
+  println!("The array is {:?} & the size is {}", arr, arr.len());
+
+  
 }
