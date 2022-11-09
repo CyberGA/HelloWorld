@@ -117,7 +117,14 @@ pub fn using_array() { // can only store value of the same data time
 
   println!("The array is {:?} & the size is {}", arr, arr.len());
 
-  for index in 0..arr.len() {
-    println!("{}", arr[index]);
+  // for index in 0..arr.len() {
+  //   println!("Using the range method");
+  //   println!("{}", arr[index]);
+  // }
+
+  // Iter() method on array, fetches the values of all elem in an array
+  println!("Using the iter method");
+  for val in arr.iter() {
+    println!("{}", val);
   }
 }
