@@ -1,7 +1,7 @@
 mod printer;
 
 fn main() {
-    printer::using_borrowing();
+    printer::using_slice();
 }
 
 #[test]

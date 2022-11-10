@@ -194,3 +194,13 @@ pub fn print_arr(arr: &mut[i32;4]) {
    //pass a mutable reference of name
    println!("The value of name after modification is:{}",name);
  }
+
+ /**
+  * Slicing
+  */
+pub fn using_slice() {
+  let n1 = "Tutorials".to_string();
+  println!("The length of the string is {}", n1.len());
+  let c1 = &n1[4..9];
+  println!("{}", c1);
+}
