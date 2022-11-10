@@ -234,12 +234,12 @@ pub fn using_struct() {
 
   father.years = 56;
 
-  println!("Father's name is {} {} and {} years old, his telephone is {}", father.first_name, father.lastName, father.years, father.tel);
+  println!("Father's name is {} {} and {} years old, his telephone is {}", father.first_name, father.last_name, father.years, father.tel);
 
   println!(">>>>>>>>>>>>>>>>>>>>>>>>>>\n");
 
   fn display(person:Person) {
-    println!("Father's name is {} {} and {} years old, his telephone is {}", person.first_name, person.lastName, person.years, person.tel);
+    println!("Father's name is {} {} and {} years old, his telephone is {}", person.first_name, person.last_name, person.years, person.tel);
     println!(">>>>>>>>>>>>>>>>>>>>>>>>>>");
   }
 
