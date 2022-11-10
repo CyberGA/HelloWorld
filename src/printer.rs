@@ -215,3 +215,22 @@ pub fn using_slice() {
     println!("{:?}",slice); 
   }
 }
+
+
+pub fn using_struct() {
+  struct Person {
+    firstNmae:String,
+    lastName:String,
+    tel:String,
+    years:i32
+  }
+
+  let father = Person {
+    firstNmae: String::from("Vincent"),
+    lastName: String::from("Etomu"),
+    tel: String::from("+2349031741560"),
+    years: 54
+  };
+
+  println!("The father naem is {} {} and {} years old, his telephone is {}", father.firstNmae, father.lastName, father.years, father.tel);
+}

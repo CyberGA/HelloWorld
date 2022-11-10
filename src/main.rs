@@ -1,7 +1,7 @@
 mod printer;
 
 fn main() {
-    printer::using_slice();
+    printer::using_struct();
 }
 
 #[test]
