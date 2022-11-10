@@ -147,3 +147,29 @@ pub fn using_array() { // can only store value of the same data time
 pub fn print_arr(arr: &mut[i32;4]) {
   println!("The array is : {:?}", arr);
 }
+
+/**
+ * Borrowing example
+ */
+
+ pub fn using_borrowing() {
+
+  // this will not result in error
+  // because the ownership has been transferred
+  let v = vec![10,20,30];
+  print_vector(v);
+  println!("{}", v[0]); // this line gives error
+
+  fn print_vector(x:Vec<i32>){
+    println!("Inside print_vector function {:?}",x);
+ }
+
+  // this will working because we passed by reference
+  // let v = vec![10,20,30];
+  // print_vector(&v); // passing reference
+  // println!("Printing the value from main() v[0]={}",v[0]);
+
+  // fn print_vector(x:&Vec<i32>){
+  //   println!("Inside print_vector function {:?}",x);
+  // }
+ }

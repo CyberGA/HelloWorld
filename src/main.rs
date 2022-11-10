@@ -1,7 +1,7 @@
 mod printer;
 
 fn main() {
-    printer::using_array();
+    printer::using_borrowing();
 }
 
 #[test]
