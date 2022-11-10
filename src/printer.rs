@@ -232,5 +232,5 @@ pub fn using_struct() {
     years: 54
   };
 
-  println!("The father naem is {} {} and {} years old, his telephone is {}", father.firstNmae, father.lastName, father.years, father.tel);
+  println!("Father's name is {} {} and {} years old, his telephone is {}", father.firstNmae, father.lastName, father.years, father.tel);
 }
