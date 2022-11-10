@@ -204,13 +204,14 @@ pub fn using_slice() {
   // let c1 = &n1[4..9];
   // println!("{}", c1);
 
-  let data = [10,20,30,40,50];
-  use_slice(&data[1..4]);
+  let mut data = [10,20,30,40,50];
+  use_slice(&mut data[1..4]);
   println!("The length of the array is {:?}", data.len());
 
-  fn use_slice(slice:&[i32]) { 
+  fn use_slice(slice:&mut [i32]) { 
     // is taking a slice or borrowing a part of an array of i32s
     println!("length of slice is {:?}", slice.len());
+    slice[0] = 1010;
     println!("{:?}",slice); 
   }
 }
