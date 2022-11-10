@@ -219,27 +219,27 @@ pub fn using_slice() {
 
 pub fn using_struct() {
   struct Person {
-    firstNmae:String,
-    lastName:String,
+    first_name:String,
+    last_name:String,
     tel:String,
     years:i32
   }
 
   let mut father = Person {
-    firstNmae: String::from("Vincent"),
-    lastName: String::from("Etomu"),
+    first_name: String::from("Vincent"),
+    last_name: String::from("Etomu"),
     tel: String::from("+2349031741560"),
     years: 54
   };
 
   father.years = 56;
 
-  println!("Father's name is {} {} and {} years old, his telephone is {}", father.firstNmae, father.lastName, father.years, father.tel);
+  println!("Father's name is {} {} and {} years old, his telephone is {}", father.first_name, father.lastName, father.years, father.tel);
 
   println!(">>>>>>>>>>>>>>>>>>>>>>>>>>\n");
 
   fn display(person:Person) {
-    println!("Father's name is {} {} and {} years old, his telephone is {}", person.firstNmae, person.lastName, person.years, person.tel);
+    println!("Father's name is {} {} and {} years old, his telephone is {}", person.first_name, person.lastName, person.years, person.tel);
     println!(">>>>>>>>>>>>>>>>>>>>>>>>>>");
   }
 
