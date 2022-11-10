@@ -225,12 +225,14 @@ pub fn using_struct() {
     years:i32
   }
 
-  let father = Person {
+  let mut father = Person {
     firstNmae: String::from("Vincent"),
     lastName: String::from("Etomu"),
     tel: String::from("+2349031741560"),
     years: 54
   };
+
+  father.years = 56;
 
   println!("Father's name is {} {} and {} years old, his telephone is {}", father.firstNmae, father.lastName, father.years, father.tel);
 }
