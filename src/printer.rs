@@ -156,20 +156,21 @@ pub fn print_arr(arr: &mut[i32;4]) {
 
   // this will not result in error
   // because the ownership has been transferred
-  let v = vec![10,20,30];
-  print_vector(v);
-  println!("{}", v[0]); // this line gives error
+//   let v = vec![10,20,30];
+//   print_vector(v);
+//   println!("{}", v[0]); // this line gives error
 
-  fn print_vector(x:Vec<i32>){
-    println!("Inside print_vector function {:?}",x);
- }
+//   fn print_vector(x:Vec<i32>){
+//     println!("Inside print_vector function {:?}",x);
+//  }
 
   // this will working because we passed by reference
-  // let v = vec![10,20,30];
-  // print_vector(&v); // passing reference
-  // println!("Printing the value from main() v[0]={}",v[0]);
+  // and the ownership is transferred back to the originally object
+  let v = vec![10,20,30];
+  print_vector(&v); // passing reference
+  println!("Printing the value from main() v[0]={}",v[0]);
 
-  // fn print_vector(x:&Vec<i32>){
-  //   println!("Inside print_vector function {:?}",x);
-  // }
+  fn print_vector(x:&Vec<i32>){
+    println!("Inside print_vector function {:?}",x);
+  }
  }
