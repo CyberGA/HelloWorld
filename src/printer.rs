@@ -236,7 +236,7 @@ pub fn using_struct() {
 
   println!("Father's name is {} {} and {} years old, his telephone is {}", father.firstNmae, father.lastName, father.years, father.tel);
 
-  println!(">>>>>>>>>>>>>>>>>>>>>>>>>>");
+  println!(">>>>>>>>>>>>>>>>>>>>>>>>>>\n");
 
   fn display(person:Person) {
     println!("Father's name is {} {} and {} years old, his telephone is {}", person.firstNmae, person.lastName, person.years, person.tel);
