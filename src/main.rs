@@ -1,7 +1,7 @@
 mod printer;
 
 fn main() {
-    printer::using_vector();
+    printer::using_hashmap();
 }
 
 #[test]
