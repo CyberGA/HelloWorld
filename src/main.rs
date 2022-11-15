@@ -1,7 +1,7 @@
 mod printer;
 
 fn main() {
-    printer::option_enum();
+    printer::using_vector();
 }
 
 #[test]
