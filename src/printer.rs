@@ -252,10 +252,25 @@ pub fn method_in_struct() {
   }
   impl  Rectangle {
       fn area(&self) {
-        println!("The are is {}", self.width * self.height)
+        println!("The area is {}", self.width * self.height)
       }
   }
   let wall = Rectangle{width: 4, height: 8};
   wall.area();
+}
 
+pub fn static_struct_method() {
+  struct Rectangle {
+    width: u32, height: u32
+  }
+  impl  Rectangle {
+      fn areaInstance(w: u32, h: u32) -> Rectangle {
+        Rectangle { width: w, height: h}
+      }
+      fn area(&self) {
+        println!("The area is {}", self.width * self.height)
+      }
+  }
+  let wall = Rectangle::areaInstance(4, 8);
+  wall.area();
 }
