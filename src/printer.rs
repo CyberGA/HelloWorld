@@ -1,3 +1,5 @@
+use std::{collections::HashMap, any};
+
 const LENGTH: u32 = 20;
 /// This function is just to say hi
 /**
@@ -309,5 +311,36 @@ pub fn using_vector() {
 
   for (index, val) in v.iter().enumerate() {
     println!("{} is at {}", val, index)
+  }
+}
+
+pub fn using_hashmap() {
+  let mut state_codes:HashMap<&str, &str> = HashMap::new();
+  state_codes.insert("US", "United States");
+  state_codes.insert("NG", "Nigeria");
+  state_codes.insert("GH", "Ghana");
+  state_codes.insert("SA", "South Africa");
+
+  println!("The size of the map is {}\n", state_codes.len());
+
+  println!("{:?}\n", state_codes);
+
+  match state_codes.get(&"US") {
+      Some(val) => {
+        println!("Value for key US is {}", val);
+      }
+      None => {
+        println!("Nothing is found");
+      }
+  }
+
+  state_codes.remove(&"GH");
+
+  for (key, val) in state_codes.iter() {
+    println!("Key: {} and the value is {}\n", key, val )
+  }
+
+  if state_codes.contains_key(&"NG") {
+    println!("Found key")
   }
 }
