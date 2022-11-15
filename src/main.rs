@@ -1,7 +1,7 @@
 mod printer;
 
 fn main() {
-    printer::static_struct_method();
+    printer::option_enum();
 }
 
 #[test]
