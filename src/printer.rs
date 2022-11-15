@@ -1,4 +1,4 @@
-use std::{collections::HashMap, any};
+use std::{collections::{HashMap, HashSet}, any};
 
 const LENGTH: u32 = 20;
 /// This function is just to say hi
@@ -315,19 +315,20 @@ pub fn using_vector() {
 }
 
 pub fn using_hashmap() {
-  let mut state_codes:HashMap<&str, &str> = HashMap::new();
-  state_codes.insert("US", "United States");
-  state_codes.insert("NG", "Nigeria");
-  state_codes.insert("GH", "Ghana");
-  state_codes.insert("SA", "South Africa");
+  // let mut state_codes:HashMap<&str, &str> = HashMap::new();
+  let mut state_codes = HashSet::new();
+  state_codes.insert("US");
+  state_codes.insert("NG");
+  state_codes.insert("GH");
+  state_codes.insert("SA");
 
-  println!("The size of the map is {}\n", state_codes.len());
+  println!("The size of the set is {}\n", state_codes.len());
 
   println!("{:?}\n", state_codes);
 
   match state_codes.get(&"US") {
       Some(val) => {
-        println!("Value for key US is {}", val);
+        println!("Value US is {}", val);
       }
       None => {
         println!("Nothing is found");
@@ -336,11 +337,11 @@ pub fn using_hashmap() {
 
   state_codes.remove(&"GH");
 
-  for (key, val) in state_codes.iter() {
-    println!("Key: {} and the value is {}\n", key, val )
+  for val in state_codes.iter() {
+    println!("value is {}\n", val )
   }
 
-  if state_codes.contains_key(&"NG") {
+  if state_codes.contains(&"NG") {
     println!("Found key")
   }
 }
