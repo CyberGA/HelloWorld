@@ -1,5 +1,3 @@
-use std::io;
-
 const LENGTH: u32 = 20;
 /// This function is just to say hi
 /**
@@ -295,5 +293,21 @@ pub fn option_enum() {
       None => {
         println!("Not even number")
       }
+  }
+}
+
+pub fn using_vector() {
+  // let mut v = Vec::new();
+  let mut v = vec![10, 20, 30, 40];
+  v.remove(0);
+  v.push(15);
+  v.push(25);
+  v.push(35);
+
+  println!("The size of the vector is {}", v.len());
+  println!("{:?}\n", v);
+
+  for (index, val) in v.iter().enumerate() {
+    println!("{} is at {}", val, index)
   }
 }
