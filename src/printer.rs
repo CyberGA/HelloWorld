@@ -274,3 +274,24 @@ pub fn static_struct_method() {
   let wall = Rectangle::areaInstance(4, 8);
   wall.area();
 }
+
+pub fn option_enum() {
+  fn is_even(no: i32) -> Option<bool> {
+    if no % 2 == 0 {
+      Some(true)
+    } else {
+        None
+    }
+  }
+
+  match is_even(4) {
+      Some(data) => {
+        if data == true {
+          println!("Even number");
+        }
+      },
+      None => {
+        println!("Not even number")
+      }
+  }
+}
