@@ -1,3 +1,5 @@
+use std::io;
+
 const LENGTH: u32 = 20;
 /// This function is just to say hi
 /**
@@ -284,7 +286,7 @@ pub fn option_enum() {
     }
   }
 
-  match is_even(4) {
+  match is_even(5) {
       Some(data) => {
         if data == true {
           println!("Even number");
