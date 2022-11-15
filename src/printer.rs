@@ -1,4 +1,4 @@
-use std::{collections::{HashMap, HashSet}, any};
+use std::{collections::{HashMap, HashSet}, any, fs::File};
 
 const LENGTH: u32 = 20;
 /// This function is just to say hi
@@ -344,4 +344,12 @@ pub fn using_hashmap() {
   if state_codes.contains(&"NG") {
     println!("Found key")
   }
+}
+
+pub fn working_on_errors() -> Result<bool, String> {
+  if 4%2==0 {
+      return Ok(true);
+   } else {
+      return Err("NOT_AN_EVEN".to_string());
+   }
 }

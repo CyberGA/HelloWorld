@@ -1,7 +1,8 @@
 mod printer;
 
 fn main() {
-    printer::using_hashmap();
+    let res = printer::working_on_errors().unwrap();
+    
 }
 
 #[test]
