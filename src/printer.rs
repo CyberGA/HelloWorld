@@ -245,3 +245,17 @@ pub fn using_struct() {
 
   display(father);
 }
+
+pub fn method_in_struct() {
+  struct Rectangle {
+    width: u32, height: u32
+  }
+  impl  Rectangle {
+      fn area(&self) {
+        println!("The are is {}", self.width * self.height)
+      }
+  }
+  let wall = Rectangle{width: 4, height: 8};
+  wall.area();
+
+}

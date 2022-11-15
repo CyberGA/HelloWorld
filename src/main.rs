@@ -1,7 +1,7 @@
 mod printer;
 
 fn main() {
-    printer::using_struct();
+    printer::method_in_struct();
 }
 
 #[test]
