@@ -1,4 +1,4 @@
-use std::{collections::{HashMap, HashSet}, any, fs::File, fmt::Display, io::Write};
+use std::{collections::{HashMap, HashSet}, any, fs::File, fmt::Display, io::{Write, Read}};
 
 const LENGTH: u32 = 20;
 /// This function is just to say hi
@@ -417,8 +417,13 @@ pub fn read_write() {
 }
 
 pub fn working_with_file() {
-  let mut file = std::fs::File::create("./src/data.txt").expect("creating file failed");
-  file.write_all("Hello, World!".as_bytes()).expect("Writing failed");
-  file.write_all("\nWelcome to Rust Programming!!".as_bytes()).expect("writing failed");
-  println!("Data successfully written");
+  // let mut file = std::fs::File::create("./src/data.txt").expect("creating file failed");
+  // file.write_all("Hello, World!".as_bytes()).expect("Writing failed");
+  // file.write_all("\nWelcome to Rust Programming!!".as_bytes()).expect("writing failed");
+  // println!("Data successfully written");
+
+  let mut file = std::fs::File::open("./src/data.txt").unwrap();
+  let mut contents = String::new();
+  file.read_to_string(&mut contents).unwrap();
+  println!("{}", contents);
 }
