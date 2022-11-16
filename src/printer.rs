@@ -1,4 +1,4 @@
-use std::{collections::{HashMap, HashSet}, any, fs::File, fmt::Display};
+use std::{collections::{HashMap, HashSet}, any, fs::File, fmt::Display, io::Write};
 
 const LENGTH: u32 = 20;
 /// This function is just to say hi
@@ -393,4 +393,18 @@ pub fn using_traits() {
 pub fn proprinter<T:Display>(t:T) {
   println!("Inside the proprinter generic function");
   println!("{}", t);
+}
+
+pub fn read_write() {
+  let mut line = String::new();
+  println!("Enter your fullname:");
+
+  let b1 = std::io::stdin().read_line(&mut line).unwrap();
+  println!("Hello, {}", line);
+  println!("No of bytes read: {}\n\n", b1);
+
+  let output1 = std::io::stdout().write("Hello, World!\n".as_bytes()).unwrap();
+  let output2 = std::io::stdout().write("Welcome to rust programming\n".as_bytes()).unwrap();
+  std::io::stdout().write(format!("\nbytes written {}", (output1+output2)).as_bytes()).unwrap();
+
 }
