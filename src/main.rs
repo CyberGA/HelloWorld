@@ -1,7 +1,7 @@
 mod printer;
 
 fn main() {
-    printer::read_write();
+    printer::working_with_file();
 }
 
 #[test]

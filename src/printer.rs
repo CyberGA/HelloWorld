@@ -415,3 +415,10 @@ pub fn read_write() {
     println!("[{}]", arg);
   }
 }
+
+pub fn working_with_file() {
+  let mut file = std::fs::File::create("./src/data.txt").expect("creating file failed");
+  file.write_all("Hello, World!".as_bytes()).expect("Writing failed");
+  file.write_all("\nWelcome to Rust Programming!!".as_bytes()).expect("writing failed");
+  println!("Data successfully written");
+}
