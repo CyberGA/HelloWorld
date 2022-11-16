@@ -1,4 +1,4 @@
-use std::{collections::{HashMap, HashSet}, any, fs::File, fmt::Display, io::{Write, Read}};
+use std::{collections::{HashMap, HashSet}, any, fs::{File, OpenOptions}, fmt::Display, io::{Write, Read}};
 
 const LENGTH: u32 = 20;
 /// This function is just to say hi
@@ -422,11 +422,16 @@ pub fn working_with_file() {
   // file.write_all("\nWelcome to Rust Programming!!".as_bytes()).expect("writing failed");
   // println!("Data successfully written");
 
-  // let mut file = std::fs::File::open("./src/data.txt").unwrap();
-  // let mut contents = String::new();
-  // file.read_to_string(&mut contents).unwrap();
-  // println!("{}", contents);
+  let mut file = std::fs::File::open("./src/data.txt").unwrap();
+  let mut contents = String::new();
+  file.read_to_string(&mut contents).unwrap();
+  println!("{}", contents);
 
-  let mut file = std::fs::remove_file("./src/data.txt").expect("Deleting file failed");
-  println!("File deleted");
+  // let mut file = std::fs::remove_file("./src/data.txt").expect("Deleting file failed");
+  // println!("File deleted");
+
+  // let mut file = OpenOptions::new().append(true).open("./src/data.txt").expect("Cannot open file");
+  // file.write_all("Hello, World!\n".as_bytes()).expect("write failed");
+  // file.write_all("This is rust programming!\n".as_bytes()).expect("write failed");
+  // println!("File append success");
 }
