@@ -347,7 +347,7 @@ pub fn using_hashmap() {
 }
 
 pub fn working_on_errors() -> Result<bool, String> {
-  if 4%2==0 {
+  if 5%2==0 {
       return Ok(true);
    } else {
       return Err("NOT_AN_EVEN".to_string());
