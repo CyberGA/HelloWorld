@@ -405,6 +405,13 @@ pub fn read_write() {
 
   let output1 = std::io::stdout().write("Hello, World!\n".as_bytes()).unwrap();
   let output2 = std::io::stdout().write("Welcome to rust programming\n".as_bytes()).unwrap();
-  std::io::stdout().write(format!("\nbytes written {}", (output1+output2)).as_bytes()).unwrap();
+  std::io::stdout().write(format!("\nbytes written {}\n\n", (output1+output2)).as_bytes()).unwrap();
 
+  // get command line arg
+  let cmd_line = std::env::args();
+  println!("No of elements in args is: {}", cmd_line.len());
+  
+  for arg in cmd_line {
+    println!("[{}]", arg);
+  }
 }
