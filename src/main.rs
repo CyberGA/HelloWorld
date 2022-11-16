@@ -1,7 +1,7 @@
 mod printer;
 
 fn main() {
-    printer::using_generics()
+    printer::using_traits()
 }
 
 #[test]
