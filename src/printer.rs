@@ -353,8 +353,18 @@ pub fn working_on_errors() -> Result<bool, String> {
       return Err("NOT_AN_EVEN".to_string());
    }
 }
+
 pub fn using_generics() {
   let mut ages: Vec<u32> = vec![12, 13, 18, 20];
   ages.push(40);
-  println!("{:?}", ages)
+  println!("{:?}\n\n", ages);
+
+  struct  Data<T> {
+    value: T
+  }
+
+  let t:Data<&str> = Data { value: "Gbenga" };
+  let person:Data<String> = Data { value: "Gbenga Joshua Etomu".to_string() };
+  println!("The data value is: {}", t.value);
+  println!("The person's name is: {}", person.value);
 }
