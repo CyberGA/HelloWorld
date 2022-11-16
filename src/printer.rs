@@ -368,3 +368,23 @@ pub fn using_generics() {
   println!("The data value is: {}", t.value);
   println!("The person's name is: {}", person.value);
 }
+
+pub fn using_traits() {
+  struct Book {
+    name: &'static str,
+    id: u32
+  }
+
+  trait Printable {
+      fn disp(&self);
+  }
+
+  impl Printable for Book {
+    fn disp(&self) {
+      println!("Book name: {} and Book Id: {}", self.name, self.id)
+    }
+  }
+
+  let book: Book = Book { name: "The Blacklist", id: 1229 };
+  book.disp();
+}
