@@ -1,4 +1,4 @@
-use std::{collections::{HashMap, HashSet}, any, fs::File};
+use std::{collections::{HashMap, HashSet}, any, fs::File, fmt::Display};
 
 const LENGTH: u32 = 20;
 /// This function is just to say hi
@@ -387,4 +387,10 @@ pub fn using_traits() {
 
   let book: Book = Book { name: "The Blacklist", id: 1229 };
   book.disp();
+}
+
+// generic functions
+pub fn proprinter<T:Display>(t:T) {
+  println!("Inside the proprinter generic function");
+  println!("{}", t);
 }
