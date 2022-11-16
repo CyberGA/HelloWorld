@@ -353,3 +353,8 @@ pub fn working_on_errors() -> Result<bool, String> {
       return Err("NOT_AN_EVEN".to_string());
    }
 }
+pub fn using_generics() {
+  let mut ages: Vec<u32> = vec![12, 13, 18, 20];
+  ages.push(40);
+  println!("{:?}", ages)
+}
