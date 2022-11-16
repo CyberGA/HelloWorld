@@ -455,5 +455,12 @@ pub fn working_with_iterators() {
     }
   }
   println!("{:?}", a);
+}
 
+pub fn using_closure() {
+  let is_even = |x:u32| {
+    x % 3 == 0
+  };
+
+  println!("12 os even ? {}", is_even(12));
 }

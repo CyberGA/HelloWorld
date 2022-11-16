@@ -1,7 +1,7 @@
 mod printer;
 
 fn main() {
-    printer::working_with_iterators();
+    printer::using_closure();
 }
 
 #[test]
