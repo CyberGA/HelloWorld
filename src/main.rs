@@ -1,7 +1,7 @@
 mod printer;
 
 fn main() {
-    printer::using_closure();
+    printer::using_smart_pointers();
 }
 
 #[test]

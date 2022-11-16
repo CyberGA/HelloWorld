@@ -464,3 +464,11 @@ pub fn using_closure() {
 
   println!("12 os even ? {}", is_even(12));
 }
+
+pub fn using_smart_pointers() {
+  let x = 5;
+  let y = Box::new(x);
+
+  println!("{}", 5 == x);
+  println!("{}", 5 == *y);
+}
