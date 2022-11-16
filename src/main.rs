@@ -1,7 +1,7 @@
 mod printer;
 
 fn main() {
-    printer::working_with_file();
+    printer::working_with_iterators();
 }
 
 #[test]

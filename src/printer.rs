@@ -437,3 +437,23 @@ pub fn working_with_file() {
 
   
 }
+
+pub fn working_with_iterators() {
+  let mut a = [10, 20, 30];
+
+  let mut iter = a.iter();
+
+  println!("{:?}", iter);
+  // println!("{:?}", iter.next());
+  // println!("{:?}", iter.next());
+  // println!("{:?}", iter.next());
+
+  for data in a.into_iter() {
+    match data {
+      20 => println!("The value is at 20"),
+      _ => println!("Hello {}", data)
+    }
+  }
+  println!("{:?}", a);
+
+}
