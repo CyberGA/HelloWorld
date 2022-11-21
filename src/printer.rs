@@ -258,7 +258,8 @@ pub fn using_struct() {
 
   let student_age: Ages = Ages(12, 16, 18);
 
-
+  // unit struct
+  struct QuitMessage;
 }
 
 pub fn method_in_struct() {
