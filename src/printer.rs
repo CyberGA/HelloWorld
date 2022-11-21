@@ -234,9 +234,14 @@ pub fn using_struct() {
     years: 54
   };
 
+  let mother = Person{
+    first_name: "Mum".to_string(),
+    ..father
+  };
+
   father.years = 56;
 
-  println!("Father's name is {} {} and {} years old, his telephone is {}", father.first_name, father.last_name, father.years, father.tel);
+  println!("Father's name is {} {} and {} years old, his telephone is {}", mother.first_name, mother.last_name, mother.years, mother.tel);
 
   println!(">>>>>>>>>>>>>>>>>>>>>>>>>>\n");
 
@@ -245,7 +250,7 @@ pub fn using_struct() {
     println!(">>>>>>>>>>>>>>>>>>>>>>>>>>");
   }
 
-  display(father);
+  display(mother);
 }
 
 pub fn method_in_struct() {
