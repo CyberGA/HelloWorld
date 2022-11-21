@@ -220,6 +220,7 @@ pub fn using_slice() {
 
 
 pub fn using_struct() {
+  #[derive(Debug)]
   struct Person {
     first_name:String,
     last_name:String,
@@ -241,16 +242,23 @@ pub fn using_struct() {
 
   father.years = 56;
 
-  println!("Father's name is {} {} and {} years old, his telephone is {}", mother.first_name, mother.last_name, mother.years, mother.tel);
-
   println!(">>>>>>>>>>>>>>>>>>>>>>>>>>\n");
 
+  println!("{:?}", mother);
+
   fn display(person:Person) {
-    println!("Father's name is {} {} and {} years old, his telephone is {}", person.first_name, person.last_name, person.years, person.tel);
+    println!("{:?}", person);
     println!(">>>>>>>>>>>>>>>>>>>>>>>>>>");
   }
 
-  display(mother);
+  // display(mother);
+
+  // tuple struct
+  struct Ages(i32, i32, i32);
+
+  let student_age: Ages = Ages(12, 16, 18);
+
+
 }
 
 pub fn method_in_struct() {
