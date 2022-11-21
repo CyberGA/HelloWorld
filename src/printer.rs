@@ -73,6 +73,13 @@ enum Days {
 }
 
 pub fn usin_enum() {
+  enum  Message{
+    Quit,
+    Move {x: i32, y: i32},
+    Write(String),
+    ChangeColor(i32, i32, i32)
+  }
+  
   let event_day:Days = Days::Monday;
 
   match event_day {
@@ -84,6 +91,8 @@ pub fn usin_enum() {
       Days::Saturday => println!("The event day is Saturday"),
       Days::Sunday => println!("The event day is Sunday")
   }
+
+  let msg_state: Message = Message::Move { x: 2, y: 4 };
 }
 
 pub fn using_constants() {
