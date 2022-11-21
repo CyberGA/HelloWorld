@@ -1,7 +1,7 @@
 mod printer;
 
 fn main() {
-    printer::using_smart_pointers();
+    printer::using_struct();
 }
 
 #[test]
