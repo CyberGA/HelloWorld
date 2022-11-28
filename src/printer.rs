@@ -420,7 +420,7 @@ pub fn using_traits() {
 // generic functions
 pub fn proprinter<T:Display>(t:T) {
   println!("Inside the proprinter generic function");
-  println!("{}", t);
+  println!("{} is of type {}", t, std::any::type_name::<T>());
 }
 
 pub fn read_write() {
