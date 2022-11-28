@@ -1,4 +1,4 @@
-use std::{collections::{HashMap, HashSet}, any, fs::{File, OpenOptions}, fmt::Display, io::{Write, Read}};
+use std::{collections::{HashMap, HashSet}, any, fs::{File, OpenOptions}, fmt::Display, io::{Write, Read}, i32};
 
 const LENGTH: u32 = 20;
 /// This function is just to say hi
@@ -419,8 +419,11 @@ pub fn using_traits() {
 
 // generic functions
 pub fn proprinter<T:Display>(t:T) {
-  println!("Inside the proprinter generic function");
+  // println!("Inside the proprinter generic function");
   println!("{} is of type {}", t, std::any::type_name::<T>());
+
+  
+  // println!("{}", std::any::type_name::<T>() == "bool")
 }
 
 pub fn read_write() {
